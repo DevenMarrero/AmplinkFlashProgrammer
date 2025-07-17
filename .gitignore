@@ -1,0 +1,21 @@
+/build/
+/bin/
+/obj/
+
+
+# CMake
+CMakeFiles/
+CmakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+
+# vscode
+.vscode/
+*.code-workspace
+
+# local FTDI Libraries
+lib/*.dll
+lib/*.a
+lib/*.lib
+

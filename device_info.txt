@@ -1,0 +1,17 @@
+i2c:
+    channel 0:  ID=0x4036011
+                LocID=0x151
+                I2C on this channel
+
+    channel 1:  ID=0x4036011
+                LocID=0x152
+                SPI on this channel
+
+SPI:
+    channel 0:  ID=0x4036011
+                LocID=0x151
+                I2C on this channel
+
+    channel 1:  ID=0x4036011
+                LocID=0x152
+                SPI on this channel
