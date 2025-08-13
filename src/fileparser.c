@@ -8,6 +8,21 @@
 #define MAX_LINE_LENGTH 512
 #define MAX_DATA_BYTES 255
 
+uint8_t hex_to_byte(const unsigned char *hex){
+    uint8_t val = 0;
+    for (int i = 0; i < 2; i++){
+        uint8_t c = hex[i];
+        val = val << 4;
+        if (c >= '0' && c <= '9')        
+            val |= (c - '0');
+        else if (c >= 'A' && c <= 'F')
+            val |= (c - 'A' + 10);
+        else if (c >= 'a' && c <= 'f')
+            val |= (c - 'a' + 10);
+    }
+    return val;
+}
+
 FT_STATUS fileparser_stream_intel_hex(const char *filename, FT_STATUS (*programmer_callback)(uint32_t addr, const uint8_t *data, uint8_t len)){
     FILE *file = fopen(filename, "r");
     if (!file){
@@ -69,20 +84,3 @@ FT_STATUS fileparser_stream_intel_hex(const char *filename, FT_STATUS (*programm
     fclose(file);
     return FT_OK;
 }
-
-
-uint8_t hex_to_byte(const unsigned char *hex){
-    uint8_t val = 0;
-    for (int i = 0; i < 2; i++){
-        uint8_t c = hex[i];
-        val = val << 4;
-        if (c >= '0' && c <= '9')        
-            val |= (c - '0');
-        else if (c >= 'A' && c <= 'F')
-            val |= (c - 'A' + 10);
-        else if (c >= 'a' && c <= 'f')
-            val |= (c - 'a' + 10);
-    }
-    return val;
-}
-
