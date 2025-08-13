@@ -149,7 +149,7 @@ typedef enum I2C_ClockRate_t{
 } I2C_CLOCKRATE;
 
 /**/
-typedef struct ChannelConfig_t
+typedef struct ChannelConfigI2C_t
 {
 	I2C_CLOCKRATE	ClockRate; 
 	/** There were 2 functions I2C_TurnOn/OffDivideByFive
@@ -187,16 +187,16 @@ typedef struct ChannelConfig_t
 
 	USHORT		currentPinState;/* BIT7   -BIT0:   Current direction of the pins	*/
 								/* BIT15 -BIT8:   Current values of the pins	*/
-} ChannelConfig;
+} ChannelConfigI2C;
 
 /* This structure associates the channel configuration information to a handle stores them in the
 form of a linked list */
-typedef struct ChannelContext_t
+typedef struct ChannelContextI2C_t
 {
 	FT_HANDLE 		handle;
-	ChannelConfig	config;
-	struct ChannelContext_t *next;
-}ChannelContext;
+	ChannelConfigI2C	config;
+	struct ChannelContextI2C_t *next;
+}ChannelContextI2C;
 
 
 /******************************************************************************/
@@ -296,13 +296,13 @@ FTDIMPSSE_API FT_STATUS I2C_OpenChannel(DWORD index, FT_HANDLE *handle);
  * This function initializes the channel and the communication parameters associated with it
  *
  * \param[in] handle Handle of the channel
- * \param[out] config Pointer to ChannelConfig structure(memory to be allocated by caller)
+ * \param[out] config Pointer to ChannelConfigI2C structure(memory to be allocated by caller)
  * \return Returns status code of type FT_STATUS(see D2XX Programmer's Guide)
  * \sa
  * \note
  * \warning
  */
-FTDIMPSSE_API FT_STATUS I2C_InitChannel(FT_HANDLE handle, ChannelConfig *config);
+FTDIMPSSE_API FT_STATUS I2C_InitChannel(FT_HANDLE handle, ChannelConfigI2C *config);
 
 /*!
  * \brief Closes a channel

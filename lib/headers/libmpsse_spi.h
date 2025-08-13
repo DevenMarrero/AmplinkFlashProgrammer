@@ -106,7 +106,7 @@ extern "C" {
 application during initialization of the channel and then it is saved in a linked-list and used
 internally by other SPI functions during operation. The structure is removed from the list when
 the user application calls SPI_CloseChannel */
-typedef struct ChannelConfig_t
+typedef struct ChannelConfigSPI_t
 {
 	DWORD	ClockRate; /* SPI clock rate, value should be <= 30000000 */
 	UCHAR	LatencyTimer; /* value in milliseconds, maximum value should be <= 255 */
@@ -130,16 +130,16 @@ typedef struct ChannelConfig_t
 					/* BIT31 -BIT24: Final values of the pins		*/
 	USHORT		currentPinState;/* BIT7   -BIT0:   Current direction of the pins	*/
 								/* BIT15 -BIT8:   Current values of the pins	*/
-}ChannelConfig;
+}ChannelConfigSPI;
 
 /* This structure associates the channel configuration information to a handle stores them in the
 form of a linked list */
-typedef struct ChannelContext_t
+typedef struct ChannelContextSPI_t
 {
 	FT_HANDLE 		handle;
-	ChannelConfig	config;
-	struct ChannelContext_t *next;
-}ChannelContext;
+	ChannelConfigSPI	config;
+	struct ChannelContextSPI_t *next;
+}ChannelContextSPI;
 
 
 /******************************************************************************/
@@ -242,13 +242,13 @@ FTDIMPSSE_API FT_STATUS SPI_OpenChannel(DWORD index, FT_HANDLE *handle);
  * This function initializes the channel and the communication parameters associated with it
  *
  * \param[in] handle Handle of the channel
- * \param[out] config Pointer to ChannelConfig structure(memory to be allocated by caller)
+ * \param[out] config Pointer to ChannelConfigSPI structure(memory to be allocated by caller)
  * \return Returns status code of type FT_STATUS(see D2XX Programmer's Guide)
  * \sa
  * \note
  * \warning
  */
-FTDIMPSSE_API FT_STATUS SPI_InitChannel(FT_HANDLE handle, ChannelConfig *config);
+FTDIMPSSE_API FT_STATUS SPI_InitChannel(FT_HANDLE handle, ChannelConfigSPI *config);
 
 /*!
  * \brief Closes a channel
