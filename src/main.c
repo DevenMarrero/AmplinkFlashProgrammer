@@ -37,13 +37,12 @@ int main(int argc, char *argv[]) {
     Args args;
 
     // get cli args and set defaults
-    if (parse_args(argc, argv, &args) != 0){
+    if (parse_args(argc, argv, &args) != 0)
         return 1;
-    }
-    if (!args.file1_name) args.file1_name = "flash_f1.hex";
-    if (!args.file2_name) args.file2_name = "flash_f2.hex";
-    if (!args.file3_name) args.file3_name = "flash_f3.hex";
-    if (!args.file4_name) args.file4_name = "clock.hex";
+    if (!args.file1_name) args.file1_name = "clock.hex";
+    if (!args.file2_name) args.file2_name = "flash_2A.hex";
+    if (!args.file3_name) args.file3_name = "flash_3A.hex";
+    if (!args.file4_name) args.file4_name = "flash_4A.hex";
     if (!args.i2c_addr)   args.i2c_addr = 0x6A;
 
 
@@ -63,7 +62,7 @@ int main(int argc, char *argv[]) {
 
     // -- SPI STREAM ---------------------
     // select chip
-    char **filenames[] = {&args.file1_name, &args.file2_name, &args.file3_name};
+    char **filenames[] = {&args.file2_name, &args.file3_name, &args.file4_name};
     spi_chip_select_t chipSelects[] = {SPI_CS_2, SPI_CS_3, SPI_CS_4};
     for (int i = 0; i < 3; i++){
         const char *filename = *filenames[i];
@@ -112,14 +111,13 @@ int main(int argc, char *argv[]) {
     }
 
 
-
     // --- I2C ------------------
     ftStatus = programmer_clock_set_addr(args.i2c_addr);
     if (ftStatus != FT_OK) printf("\nFailed to set i2c address: 0x%0X\n", args.i2c_addr);
     else printf("\nSet i2c address: 0x%0X\n", args.i2c_addr);
 
     printf("Programming clock...   ");
-    ftStatus = fileparser_stream_intel_hex(args.file4_name, programmer_clock_write_page);
+    ftStatus = fileparser_stream_intel_hex(args.file1_name, programmer_clock_write_page);
     if (ftStatus != FT_OK) 
         printf("FAILED!: stream\n");
     else {
