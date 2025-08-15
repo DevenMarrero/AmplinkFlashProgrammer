@@ -25,6 +25,10 @@
 var NAVTREE =
 [
   [ "Onebox Processor Programmer", "index.html", [
+    [ "Introduction", "index.html#intro_sec", null ],
+    [ "Files", "index.html#code_sec", null ],
+    [ "Build Instructions", "index.html#build_sec", null ],
+    [ "Dependencies", "index.html#depend_sec", null ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],

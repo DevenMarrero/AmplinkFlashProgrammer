@@ -8,7 +8,7 @@ var indexSectionsWithContent =
   5: "fs",
   6: "cgis",
   7: "g",
-  8: "abcdfiopsu"
+  8: "abdfiopsu"
 };
 
 var indexSectionNames =

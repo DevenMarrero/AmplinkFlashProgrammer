@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['ft4232_20amplink_20programmer_0',['FT4232 Amplink Programmer',['../C:/Users/dmarrero/Documents/FT4232_Programmer/README.md#ft4232-amplink-programmer',1,'']]]
+  ['instructions_0',['Build Instructions',['../index.html#build_sec',1,'']]],
+  ['introduction_1',['Introduction',['../index.html#intro_sec',1,'']]]
 ];

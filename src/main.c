@@ -10,9 +10,7 @@
 #include "fileparser.h"
 #include "config.h"
 #include "cli.h"
-// #include "gpio_driver.h"
-// #include "spi_driver.h"
-// #include "i2c_driver.h"
+
 
 #define APP_CHECK_STATUS(exp) {if(exp!=FT_OK){printf("%s:%d:%s(): status(0x%x) \
 	!= FT_OK\n",__FILE__, __LINE__, __FUNCTION__,exp);}else{;}};
@@ -61,7 +59,6 @@ int main(int argc, char *argv[]) {
 
 
     // -- SPI STREAM ---------------------
-    // select chip
     char **filenames[] = {&args.file2_name, &args.file3_name, &args.file4_name};
     spi_chip_select_t chipSelects[] = {SPI_CS_2, SPI_CS_3, SPI_CS_4};
     for (int i = 0; i < 3; i++){

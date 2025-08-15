@@ -1,5 +1,5 @@
 # FT4232 Amplink Programmer
-
+This project provides drivers and programming features to utilize an AmPLink FTDI-based device for the purpose of programming the OneBox Processor.
 
 ## Build Instructions
 
@@ -7,7 +7,7 @@
 1. Install [cmake](https://cmake.org/download/) and Visual Studio extension.
 2. Clone the repo:
 ```bash
-git clone https://github.com/<>.git
+git clone https://github.com/DevenMarrero/AmplinkFlashProgrammer.git
 ```
 3. Build:
 ```bash
@@ -16,17 +16,17 @@ mkdir build && cd build
 cmake ..
 cmake --build . --config Release
 ```
-4. Copy `ftd2xx.dll` and `libmpsse.dll` from lib/ to bin/.
+4. Copy `ftd2xx.dll` and `libmpsse.dll` from `lib/` to `bin/`.
 
 ## Dependencies
 
 The following DLLs are required to run the program
 | DLL Name | Purpose | Source |
 | -------- | ------- | ------ |
-| 'ftd2xx.dll' | ftd2xx device driver | Included in 'libs/' folder |
-| 'libmpsse.dll' | SPI/I2C device driver | Included in 'libs/' folder |
+| `ftd2xx.dll` | ftd2xx device driver | Included in `libs/` folder |
+| `libmpsse.dll` | SPI/I2C device driver | Included in `libs/` folder |
 
-**Important:** Make sure the DLLs are in the same directory as the executable. They can be copied from 'libs/' folder
+**Important:** Make sure the DLLs are in the same directory as the executable. They can be copied from `libs/` folder
 
 ## Usage
 
