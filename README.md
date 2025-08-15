@@ -7,7 +7,7 @@ or by running the shortcut at `docs/open-docs.bat`
 ## Build Instructions
 
 ### Windows
-1. Install [cmake](https://cmake.org/download/) and Visual Studio extension.
+1. Install [cmake](https://cmake.org/download/).
 2. Clone the repo:
 ```bash
 git clone https://github.com/DevenMarrero/AmplinkFlashProgrammer.git
