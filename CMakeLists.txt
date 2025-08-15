@@ -10,7 +10,7 @@ link_directories(${CMAKE_SOURCE_DIR}/lib)
 
 file(GLOB SOURCES "src/*.c")
 
-add_executable(programmer ${SOURCES})
+add_executable(AmplinkFlashProgrammer ${SOURCES})
 
 # Link Libraries
-target_link_libraries(programmer ftd2xx libmpsse )
+target_link_libraries(AmplinkFlashProgrammer ftd2xx libmpsse)
