@@ -8,15 +8,26 @@
 
 #define AMPLINK_CHANNEL_NUM 4 // amplink programmer will always have 4 channels
 
-
+/*!
+ * @struct ProgrammerContext
+ * @brief Context holding all handles for a single FTDI device.
+ * 
+ * Stores the handles for the 4 FTDI communication channels present on the FT4232.
+ * 
+ * @note These handles must be passed to the corresponding driver file
+ * @see spi_driver.h, gpio_driver.h, i2c_driver.h
+ * 
+ */
 typedef struct {
-    FT_HANDLE ftSPIHandle;
-    FT_HANDLE ftI2CHandle;
-    FT_HANDLE ftGPIOHandle;
-    FT_HANDLE ftCTRLHandle;
+    FT_HANDLE ftSPIHandle;  /*!< Handle for SPI communication channel */
+    FT_HANDLE ftI2CHandle;  /*!< Handle for I2C communication channel */
+    FT_HANDLE ftGPIOHandle; /*!< Handle for general GPIO channel */
+    FT_HANDLE ftCTRLHandle; /*!< Handle for internal control GPIO channel */
 } ProgrammerContext;
 
+//! Global static instance of ProgrammerContext
 static ProgrammerContext device;
+//! Static variable of the versaClock i2c address
 static uint8_t i2c_addr;
 
 
