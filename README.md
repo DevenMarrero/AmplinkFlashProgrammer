@@ -32,7 +32,7 @@ The following DLLs are required to run the program
 
 ### CLI Syntax
 
-`./programmer.exe [options]`
+`./AmplinkFlashProgrammer.exe [options]`
 
 ### Options
 
@@ -47,4 +47,4 @@ The following DLLs are required to run the program
 
 ## Arduino Simulator
 
-'arduino_analyzer.ino' was designed to simulate the flash memory and VersaClock devices. Connecting the SPI and I2C lines of the Arduino UNO to the amplink will allow it to respond to opcodes with the expected addresses and status registers. 
+`arduino_analyzer.ino` was designed to simulate the flash memory and VersaClock devices. Connecting the SPI and I2C lines of the Arduino UNO to the amplink will allow it to respond to opcodes with the expected addresses and status registers. 
