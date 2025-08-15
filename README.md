@@ -1,7 +1,8 @@
 # FT4232 Amplink Programmer
 This project provides drivers and programming features to utilize an AmPLink FTDI-based device for the purpose of programming the OneBox Processor.
 
-Full code documentation can be found [here](/docs/html/index.html)
+Full code documentation can be viewed by opening `/docs/html/index.html` in your web browser
+or by running the shortcut at `docs/open-docs.bat`
 
 ## Build Instructions
 
