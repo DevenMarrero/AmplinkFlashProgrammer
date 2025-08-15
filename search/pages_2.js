@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['cli_20syntax_0',['CLI Syntax',['../C:/Users/dmarrero/Documents/FT4232_Programmer/README.md#cli-syntax',1,'']]]
+  ['dependencies_0',['Dependencies',['../index.html#depend_sec',1,'']]],
+  ['driver_20api_20s_1',['FTDI Driver API&apos;s',['../index.html#ftdi-driver-apis',1,'']]]
 ];

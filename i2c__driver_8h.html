@@ -107,8 +107,8 @@ $(function(){initNavTree('i2c__driver_8h.html','',''); });
 Functions</h2></td></tr>
 <tr class="memitem:a6e276c62a435fb3afc963b98effdca6f" id="r_a6e276c62a435fb3afc963b98effdca6f"><td class="memItemLeft" align="right" valign="top">FT_STATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e276c62a435fb3afc963b98effdca6f">i2c_driver_init</a> (<a class="el" href="config_8h.html#a125882a2fa68c744067fbb2c0331bd66">ftd_channel_t</a> deviceNumber, FT_HANDLE *pHandle)</td></tr>
 <tr class="memdesc:a6e276c62a435fb3afc963b98effdca6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the FTDI channel for i2C.  <br /></td></tr>
-<tr class="memitem:a4e36ca7d98b240e25f3c8a399e7d47aa" id="r_a4e36ca7d98b240e25f3c8a399e7d47aa"><td class="memItemLeft" align="right" valign="top">FT_STATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e36ca7d98b240e25f3c8a399e7d47aa">i2c_driver_write</a> (FT_HANDLE ftHandle, uint8_t deviceAddress, const uint8_t *data, uint32_t numBytes)</td></tr>
-<tr class="memdesc:a4e36ca7d98b240e25f3c8a399e7d47aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a number of bytes to a specified i2c address.  <br /></td></tr>
+<tr class="memitem:a0444e03b0995ef764c2cd6edee9d66ee" id="r_a0444e03b0995ef764c2cd6edee9d66ee"><td class="memItemLeft" align="right" valign="top">FT_STATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0444e03b0995ef764c2cd6edee9d66ee">i2c_driver_write</a> (FT_HANDLE ftHandle, uint8_t deviceAddress, uint8_t *data, uint32_t numBytes)</td></tr>
+<tr class="memdesc:a0444e03b0995ef764c2cd6edee9d66ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a number of bytes to a specified i2c address.  <br /></td></tr>
 <tr class="memitem:a0f59505bc414b2fe87e4e51f63b6862d" id="r_a0f59505bc414b2fe87e4e51f63b6862d"><td class="memItemLeft" align="right" valign="top">FT_STATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f59505bc414b2fe87e4e51f63b6862d">i2c_driver_read</a> (FT_HANDLE ftHandle, uint8_t deviceAddress, uint8_t registerAddress, uint8_t *data, uint32_t numBytes)</td></tr>
 <tr class="memdesc:a0f59505bc414b2fe87e4e51f63b6862d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads a number of bytes from a specified i2c address.  <br /></td></tr>
 <tr class="memitem:ada34427c44462d884970dc331a7f5021" id="r_ada34427c44462d884970dc331a7f5021"><td class="memItemLeft" align="right" valign="top">FT_STATUS&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ada34427c44462d884970dc331a7f5021">i2c_driver_close</a> (FT_HANDLE ftHandle)</td></tr>
@@ -228,8 +228,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a4e36ca7d98b240e25f3c8a399e7d47aa" name="a4e36ca7d98b240e25f3c8a399e7d47aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e36ca7d98b240e25f3c8a399e7d47aa">&#9670;&#160;</a></span>i2c_driver_write()</h2>
+<a id="a0444e03b0995ef764c2cd6edee9d66ee" name="a0444e03b0995ef764c2cd6edee9d66ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0444e03b0995ef764c2cd6edee9d66ee">&#9670;&#160;</a></span>i2c_driver_write()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -247,7 +247,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const uint8_t *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
