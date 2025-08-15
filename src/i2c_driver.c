@@ -18,7 +18,7 @@ FT_STATUS i2c_driver_init(ftd_channel_t deviceNumber, FT_HANDLE *pHandle){
 }
 
 
-FT_STATUS i2c_driver_write(FT_HANDLE ftHandle, uint8_t deviceAddress, const uint8_t *data, uint32_t numBytes){
+FT_STATUS i2c_driver_write(FT_HANDLE ftHandle, uint8_t deviceAddress, uint8_t *data, uint32_t numBytes){
     FT_STATUS ftStatus;
     DWORD bytesTransfered = 0;
     DWORD options;
