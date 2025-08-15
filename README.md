@@ -22,6 +22,7 @@ cmake --build . --config Release
 
 The following DLLs are required to run the program
 | DLL Name | Purpose | Source |
+| -------- | ------- | ------ |
 | 'ftd2xx.dll' | ftd2xx device driver | Included in 'libs/' folder |
 | 'libmpsse.dll' | SPI/I2C device driver | Included in 'libs/' folder |
 
@@ -31,17 +32,18 @@ The following DLLs are required to run the program
 
 ### CLI Syntax
 
-./programmer.exe [options]
+`./programmer.exe [options]`
 
 ### Options
 
 | Option | Description | Default |
-| -1 <file> | Input file for versaClock | clock.hex |
-| -2 <file> | Input file for Flash 2A | flash_2A.hex |
-| -3 <file> | Input file for Flash 3A | flash_3A.hex |
-| -4 <file> | Input file for Flash 4A | flash_4A.hex |
-| -i <addr> | i2c address of versaClock | 0x6A |
-| -h | show help message and exit | - |
+| -------| ----------- | ------- |
+| `-1 <file>` | Input file for versaClock | clock.hex |
+| `-2 <file>` | Input file for Flash 2A | flash_2A.hex |
+| `-3 <file>` | Input file for Flash 3A | flash_3A.hex |
+| `-4 <file>` | Input file for Flash 4A | flash_4A.hex |
+| `-i <addr>` | i2c address of versaClock | 0x6A |
+| `-h` | show help message and exit | - |
 
 ## Arduino Simulator
 
